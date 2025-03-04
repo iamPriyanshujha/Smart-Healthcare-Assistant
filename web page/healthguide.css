@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Even darker background */
+    color: #e0e0e0; 
+}.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #1e1e1e; /* Darker container */
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.3), /* Outer neon glow */
+        inset 0 0 10px rgba(0, 255, 255, 0.1); /* Inner subtle glow */
+    border-radius: 10px; /* Slightly more rounded corners */
+    padding: 30px; /* Increased padding */
+    width: calc(100% - 80px); 
+    text-align: center; 
+}.h1 {
+    font-size: 2.5em; /* Even larger heading */
+    color: #00ffff;
+    text-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.6), /* Stronger glow */
+        0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle inner shadow */
+    margin-bottom: 30px; /* Increased margin */
+}
+/* Alphabet Navigation */
+.alphabet-nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #222;
+    padding: 15px;
+    box-shadow: 
+        3px 0 15px rgba(0, 255, 255, 0.3),
+        inset -2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0 8px 8px 0;
+    height: auto; /* Key change: Auto height */
+    max-height: 90vh; /* Key change: Max height to prevent overflow */
+    overflow-y: auto; /* Key change: Scroll if content exceeds max-height */
+    width: 80px; /* Adjust width as needed */
+}
+
+.alphabet-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alphabet-nav li {
+    margin: 5px 0; /* Adjusted spacing */
+}
+
+.alphabet-nav a {
+    text-decoration: none;
+    color: #00ff80;
+    font-size: 16px; /* Adjusted font size */
+    display: block;
+    padding: 5px 10px; /* Adjusted padding */
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    white-space: nowrap; /* Key change: Prevent line breaks */
+    overflow: hidden; /* Key change: Hide overflowing text */
+    text-overflow: ellipsis; /* Key change: Add ellipsis (...) for overflow */
+}
+
+.alphabet-nav a:hover { /* Keep hover effect */
+  background-color: rgba(0, 255, 128, 0.2); /* Example hover style */
+}
+
+/* Optional: Style the scrollbar (webkit browsers) */
+.alphabet-nav::-webkit-scrollbar {
+    width: 8px;
+}
+
+.alphabet-nav::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.alphabet-nav::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
+}
+
+.alphabet-nav::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+ }/* positioning the pseudo-element */
+.alphabet-nav a:hover {
+    background-color: #333; 
+    color: #00ffff; 
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6); 
+    transform: scale(1.15) translateY(-2px); /* Scale and lift on hover */
+    box-shadow: 0 2px 10px rgba(0, 255, 128, 0.4); 
+}.alphabet-nav a:before { /* Neon underline effect */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #00ff80;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}.alphabet-nav a:hover:before {
+    transform: scaleX(1);
+}
+
+/* Content Area */.content {
+    margin-left: 90px; /* Adjusted margin */
+    padding: 30px; /* Increased padding */
+    width: calc(100% - 90px);
+}.content h2 {
+    font-size: 28px; /* Larger headings */
+    margin-top: 20px;
+    color: #ff69b4; /* Neon pink headings */
+    text-shadow: 
+        0 0 8px rgba(255, 105, 180, 0.5),
+        0 1px 2px rgba(0, 0, 0, 0.2);
+}.content p {
+    font-size: 18px; /* Larger text */
+    color: #ddd;
+    line-height: 1.7; 
+}
+
+/* Health Topics List */.health-topics ul {
+    list-style-type: none;
+    padding: 0;
+}.health-topics li {
+    padding: 15px; 
+    font-size: 1.2rem; 
+    border-bottom: 1px solid #333; 
+    transition: all 0.4s ease;
+    background-color: #222; 
+    border-radius: 8px;
+    margin-bottom: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* For the pseudo-element */
+}.health-topics li:last-child {
+    border-bottom: none;
+}.health-topics li:hover {
+    background-color: #333;
+    color: #00ff80; 
+    transform: translateY(-3px); 
+    box-shadow: 0 3px 10px rgba(0, 255, 128, 0.4); 
+}.health-topics li:before { /* Subtle glow effect on hover */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0); /* Glow starts invisible */
+    transition: box-shadow 0.3s ease;
+}.health-topics li:hover:before {
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.5); /* Glow appears on hover */
+}
+
+/* Disclaimer */.disclaimer {
+    font-size: 0.9rem; 
+    color: #888;
+    text-align: center;
+    margin-top: 30px; 
+    margin-left: 90px; 
+    padding: 20px;
+    width: calc(100% - 90px);
+}
